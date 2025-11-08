@@ -1,21 +1,19 @@
 package com.example;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class calculatortest {  // class name matches filename
+public class calculatortest {
 
     @Test
-    public void testAdd() {
+    void testAdd() {
         calculator calc = new calculator();
-        int result = calc.add(2, 3);
-        assertEquals(5, result);
+        assertEquals(5, calc.add(2, 3));
     }
 
     @Test
-    public void testSubtract() {
+    void testSubtract() {
         calculator calc = new calculator();
-        int result = calc.subtract(5, 3);
-        assertEquals(2, result);
+        assertEquals(2, calc.subtract(5, 3));
     }
 }

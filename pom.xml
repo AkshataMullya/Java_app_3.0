@@ -27,6 +27,9 @@
             <configuration>
                 <source>21</source>
                 <target>21</target>
+                <includes>
+                    <include>com/example/**/*.java</include>
+                </includes>
             </configuration>
         </plugin>
 

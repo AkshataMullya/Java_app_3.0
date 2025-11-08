@@ -23,10 +23,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M9</version>
+                <version>3.8.1</version>
                 <configuration>
-                <source>1.5</source>  <!-- Java version to compile -->
-                <target>1.5</target>  <!-- Java version for generated class files -->
+                <source>1.8</source>  <!-- Java version to compile -->
+                <target>1.8</target>  <!-- Java version for generated class files -->
             </configuration>
             </plugin>
         </plugins>

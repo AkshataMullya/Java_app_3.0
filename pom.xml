@@ -25,8 +25,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.1.2</version>
                 <configuration>
-                <source>11</source>  <!-- Java version to compile -->
-                <target>11</target>  <!-- Java version for generated class files -->
+                <source>21</source>  <!-- Java version to compile -->
+                <target>21</target>  <!-- Java version for generated class files -->
             </configuration>
             </plugin>
         </plugins>

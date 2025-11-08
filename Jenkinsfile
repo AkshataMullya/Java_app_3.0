@@ -14,6 +14,12 @@ pipeline{
     }
 
     stages{
+
+         stage('Clean Workspace') {
+         steps {
+           deleteDir() // Deletes entire workspace
+             }
+        }
          
         stage('Git Checkout'){
                     when { expression {  params.action == 'create' } }
@@ -24,11 +30,7 @@ pipeline{
             )
             }
         }
-        stage('Clean Workspace') {
-         steps {
-           deleteDir() // Deletes entire workspace
-             }
-        }
+    
 
         stage('Unit Maven'){
                 when {expression {params.action == 'create'}}

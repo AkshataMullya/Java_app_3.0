@@ -52,6 +52,24 @@ pipeline{
             }
 
         }
+        stage('Build Maven')
+        {
+            when{expression {params.action == 'create'}}
+            steps{
+                script{
+                    mvnBuild()
+                }
+            }
+        }
+        stage('Docker image build'){
+            when{expression {params.action == 'create'}}
+            steps{
+                script{
+                    dockerBuild("${params.ImageName},${params.ImageTag},${params.DockerHubUser}")
+                }
 
+            }
+
+        }
 }
 }

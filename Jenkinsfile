@@ -28,10 +28,21 @@ pipeline{
                 when {expression {params.action == 'create'}}
             steps{
                 script{
-                    mvnIntegrationTest() // Here we are calling mvnIntegrationTest Groovy file from shared Libraries
+                    mvnTest() // Here we are calling mvnIntegrationTest Groovy file from shared Libraries
                     
                 }
             }
+        }
+        stage('Interation Maven')
+        {
+            when{expression {params.action == 'create'}}
+            steps{
+
+                script{
+                    mvnIntegrationTest()
+                }
+            }
+
         }
 
 }
